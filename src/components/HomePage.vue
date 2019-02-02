@@ -39,7 +39,7 @@ export default {
   box-shadow: 10px 10px 72px -10px rgba(0, 0, 0, 0.75);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
   .myPictures {
   width: 50%;
   margin: 0;
