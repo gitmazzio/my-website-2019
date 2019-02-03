@@ -90,7 +90,7 @@ export default {
   },
   methods: {
     addPrioritySkills() {
-      console.log(this.priorityHigh);
+      // console.log(this.priorityHigh);
       this.priorityHigh.forEach(elem => {
         this.addSkill(elem.name, 'skills__bigger');
       });
@@ -119,14 +119,27 @@ export default {
 
 <style>
 .positioned__random {
-  position: absolute;
+  position: absolute; 
 }
 .skills__bigger{
-  font-size: 2.5em;
-  color: azure;
+  font-size: 2em;
+  color: #ffffff;
 }
 .skills__middle{
   font-size: 1.5em;
-  color:cadetblue;
+  color:#ffffff;
 }
+
+
+@media screen and (max-width: 575px) {
+ .skills__bigger{
+   font-size: 1.5rem;
+ }
+
+ .skills__middle{
+   font-size: 0.7rem;
+ }
+
+}
+
 </style>

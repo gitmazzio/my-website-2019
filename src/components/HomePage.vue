@@ -10,6 +10,9 @@
         I'm Matteo Mazziotti<br />
         I'm a creative front-end developer
       </p>
+      <b-badge class="p-2 m-1" variant="dark">26 years old</b-badge>
+      <b-badge class="p-2 m-1"  variant="warning">Milan</b-badge>
+      <b-badge class="p-2 m-1"  variant="danger">Front-end dev</b-badge>
     </div>
   </div>
 </template>

@@ -10,6 +10,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 
+import VueClipboard from 'vue-clipboard2'
+
+Vue.use(VueClipboard);
+
 library.add(faCoffee);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
