@@ -19,8 +19,9 @@
         <div class="slide" data-anchor="skills" id="skills">
           <SkillsSection/>
         </div>
-        <div class="slide" data-anchor="hobby">Slide 3</div>
-        <div class="slide" data-anchor="degree">Slide 4</div>
+        <div class="slide" data-anchor="hobby">
+          <h3>🚧 Under costruction! 😥</h3>
+          </div>
       </div>
       <div class="section" id="section3">
         <Contacts />

@@ -1,6 +1,6 @@
 <template>
   <div class="typewriter">
-    <h1 :class="'title--big '+moreClasses" :style="'color: '+ color">&lt;{{ msg }} /&gt;</h1>
+    <h1 :class="moreClasses" :style="'color: '+ color">&lt;{{ msg }} /&gt;</h1>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 
 <style>
 .title--big {
-  font-size: 5rem;
+  font-size: 5rem!important;
 }
 .typewriter {
   width: fit-content;
@@ -29,6 +29,7 @@ export default {
 }
 
 .typewriter h1 {
+  font-size: 3rem;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */

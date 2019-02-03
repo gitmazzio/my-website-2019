@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-sm-8 mt-5">
-      <MainTitle msg="Hi"/>
+      <MainTitle msg="Hi" moreClasses="title--big"/>
       <p>
         I'm Matteo Mazziotti<br />
         I'm a creative front-end developer

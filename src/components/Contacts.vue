@@ -1,16 +1,9 @@
 <template>
   <div>
     <MainTitle msg="Contacts"/>
-    <button v-clipboard:copy="email"></button>
-    <b-button
-      v-clipboard:copy="email"
-      variant="secondary"
-      class="sticky-bottom"
-      v-b-tooltip.click
-          title="Copied!"
-    >
-      <span>copy &#128517;</span>
-    </b-button>
+    <span>Don't hesitate to contact me at 
+        <p><a href="mailto:mmazziotti1@gmail.com">mmazziotti1@gmail.com</a></p>
+    </span>
   </div>
 </template>
 
@@ -20,14 +13,27 @@ import MainTitle from "./MainTitle.vue";
 export default {
   data() {
     return {
-      email: "mmazziotti1@gmail.com"
+      email: "mmazziotti1@gmail.com",
+      textCopied: 'Copy!'
     };
   },
   components: {
     MainTitle
+  },
+  methods: {
+    handleCopyStatus(status) {
+        if(status){
+            this.textCopied = 'Copied!'
+        }
+    }
   }
 };
 </script>
 
-<style>
+<style scoped>
+p a{
+    font-size: 1.5rem;
+    color: white;
+}
+
 </style>

@@ -17,7 +17,8 @@
     "npm": "^6.6.0",
     "vue": "^2.5.21",
     "vue-clipboard2": "^0.2.1",
-    "vue-fullpage.js": "^0.1.2"
+    "vue-fullpage.js": "^0.1.2",
+    "vue-json-viewer": "^2.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",

@@ -8,7 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import JsonViewer from 'vue-json-viewer'
 
+Vue.use(JsonViewer)
 
 import VueClipboard from 'vue-clipboard2'
 
