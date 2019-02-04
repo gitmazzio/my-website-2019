@@ -1,24 +1,26 @@
 <template>
   <div class="row ml-1 mr-1">
     <div class="col-sm-6 m-auto">
-    <MainTitle msg="Skills"/>
-    
-    <b-button @click="addNewSkillToDOM" variant="light" class="sticky-bottom mt-2" :disabled="skillsIndex === otherSkills.length">
+      <MainTitle msg="Skills"/>
+
+      <b-button
+        @click="addNewSkillToDOM"
+        variant="light"
+        class="sticky-bottom mt-2"
+        :disabled="skillsIndex === otherSkills.length"
+      >
         <span v-if="skillsIndex !== otherSkills.length">Add skill! &#128584;</span>
         <span v-else>No more skills &#128517;</span>
-    </b-button>
-    <p class="x-small mt-3">These skills come from LinkedIn!<br/>I have not imagined them, I swear!</p>
+      </b-button>
+      <p class="x-small mt-3">These skills come from LinkedIn!
+        <br>I have not imagined them, I swear!
+      </p>
     </div>
 
-    <div class="col-sm-6 mt-2" >
-      <div id="containerSkills">
-
-      </div>
-    <div>
-
+    <div class="col-sm-6 mt-2">
+      <div id="containerSkills"></div>
+      <div></div>
     </div>
-    </div>
-    
   </div>
 </template>
 
@@ -28,7 +30,78 @@ import MainTitle from "./MainTitle.vue";
 export default {
   data() {
     return {
-      emojis: ["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","⚽","🎾","🏁","🐻","🐶","🐬","🐟","🍀","👀","🚗","🍎","💝","💙","👌","❤","😍","😉","😓","😳","💪","🍸","🌟","🎉","🎶","🏈","⚾","🏆","👽","💀","🐵","🐎","💣","👃","👂","👊","💋","😘","😜","😵","🙏","👋","🚽","💃","💎","🚀","🌙","🎁","⛄","🌊","🏀","💰","👶","🐰","🔫","🚲","🍉","💛","💚"],
+      emojis: [
+        "✌",
+        "😂",
+        "😝",
+        "😁",
+        "😱",
+        "👉",
+        "🙌",
+        "🍻",
+        "🔥",
+        "🌈",
+        "☀",
+        "🎈",
+        "⚽",
+        "🎾",
+        "🏁",
+        "🐻",
+        "🐶",
+        "🐬",
+        "🐟",
+        "🍀",
+        "👀",
+        "🚗",
+        "🍎",
+        "💝",
+        "💙",
+        "👌",
+        "❤",
+        "😍",
+        "😉",
+        "😓",
+        "😳",
+        "💪",
+        "🍸",
+        "🌟",
+        "🎉",
+        "🎶",
+        "🏈",
+        "⚾",
+        "🏆",
+        "👽",
+        "💀",
+        "🐵",
+        "🐎",
+        "💣",
+        "👃",
+        "👂",
+        "👊",
+        "💋",
+        "😘",
+        "😜",
+        "😵",
+        "🙏",
+        "👋",
+        "🚽",
+        "💃",
+        "💎",
+        "🚀",
+        "🌙",
+        "🎁",
+        "⛄",
+        "🌊",
+        "🏀",
+        "💰",
+        "👶",
+        "🐰",
+        "🔫",
+        "🚲",
+        "🍉",
+        "💛",
+        "💚"
+      ],
       pageWidth: Math.max(
         document.documentElement.clientWidth,
         window.innerWidth || 0
@@ -82,19 +155,18 @@ export default {
         },
         {
           name: "SQL",
-          importance: 2,
-          
-        },
+          importance: 2
+        }
       ],
       priorityHigh: null,
       otherSkills: null
     };
   },
   created() {
-      this.priorityHigh = this.skills.filter(elem => elem.importance === 3);
-      this.otherSkills = this.skills.filter(x => !this.priorityHigh.includes(x));
+    this.priorityHigh = this.skills.filter(elem => elem.importance === 3);
+    this.otherSkills = this.skills.filter(x => !this.priorityHigh.includes(x));
   },
-  mounted(){
+  mounted() {
     this.addPrioritySkills();
   },
   components: {
@@ -104,29 +176,28 @@ export default {
     addPrioritySkills() {
       // console.log(this.priorityHigh);
       this.priorityHigh.forEach(elem => {
-        this.addSkill(elem.name, elem.competence, 'skills__bigger');
+        this.addSkill(elem.name, elem.competence, "skills__bigger");
       });
     },
     addSkill(skill, competence, skillClass) {
-      var randomNumber = Math.floor(Math.random() * (this.emojis.length));
-      
+      var randomNumber = Math.floor(Math.random() * this.emojis.length);
+
       let elem = document.createElement("p");
-      
 
       //elem.style.top = randomHeight + "px";
       //elem.style.marginLeft = randomWidth+ "px";
       //elem.classList.add("positioned__random");
-      skillClass != null ? elem.classList.add(skillClass): null;
-      
-      elem.innerHTML = this.emojis[randomNumber] +' '+skill;
+      skillClass != null ? elem.classList.add(skillClass) : null;
+
+      elem.innerHTML = this.emojis[randomNumber] + " " + skill;
 
       // console.log(mainDiv.childNodes);
       document.getElementById("containerSkills").appendChild(elem);
     },
-    addNewSkillToDOM(){
-        this.nextSkill = this.otherSkills[this.skillsIndex];
-        this.addSkill(this.nextSkill.name, 'skills__middle');
-        this.skillsIndex++;
+    addNewSkillToDOM() {
+      this.nextSkill = this.otherSkills[this.skillsIndex];
+      this.addSkill(this.nextSkill.name, "skills__middle");
+      this.skillsIndex++;
     }
   }
 };
@@ -134,31 +205,34 @@ export default {
 
 <style>
 .positioned__random {
-  position: absolute; 
+  position: absolute;
 }
-.skills__bigger{
+.skills__bigger {
   font-size: 1.3em;
   color: #ffffff;
 }
-.skills__middle{
+.skills__middle {
   font-size: 0.8em;
-  color:#ffffff;
+  color: #ffffff;
 }
-
 
 @media screen and (max-width: 575px) {
- .skills__bigger{
-   font-size: 1rem;
- }
+  .skills__bigger {
+    font-size: 1rem;
+  }
 
- .skills__middle{
-   font-size: 0.7rem;
- }
-
+  .skills__middle {
+    font-size: 0.7rem;
+  }
 }
 
-.x-small{
+@media screen and (max-width: 320px) {
+  #containerSkills p {
+    margin-bottom: 0;
+  }
+}
+
+.x-small {
   font-size: x-small;
 }
-
 </style>

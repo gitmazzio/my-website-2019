@@ -1,8 +1,10 @@
 <template>
   <div>
     <MainTitle msg="Contacts"/>
-    <span>Don't hesitate to contact me at 
-        <p><a href="mailto:mmazziotti1@gmail.com">mmazziotti1@gmail.com</a></p>
+    <span>Don't hesitate to contact me at
+      <p>
+        <a href="mailto:mmazziotti1@gmail.com">mmazziotti1@gmail.com</a>
+      </p>
     </span>
   </div>
 </template>
@@ -14,7 +16,7 @@ export default {
   data() {
     return {
       email: "mmazziotti1@gmail.com",
-      textCopied: 'Copy!'
+      textCopied: "Copy!"
     };
   },
   components: {
@@ -22,18 +24,24 @@ export default {
   },
   methods: {
     handleCopyStatus(status) {
-        if(status){
-            this.textCopied = 'Copied!'
-        }
+      if (status) {
+        this.textCopied = "Copied!";
+      }
     }
   }
 };
 </script>
 
 <style scoped>
-p a{
-    font-size: 1.5rem;
-    color: white;
+p a {
+  font-size: 1.5rem;
+  color: white;
 }
 
+@media screen and (max-width: 575px) {
+  p a {
+    font-size: 1.1rem;
+    color: white;
+  }
+}
 </style>

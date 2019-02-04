@@ -21,8 +21,9 @@ export default {
 
 <style>
 .title--big {
-  font-size: 5rem!important;
+  font-size: 5rem !important;
 }
+
 .typewriter {
   width: fit-content;
   margin: auto;
@@ -35,9 +36,27 @@ export default {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: 
-    typing 2.5s steps(30, end),
-    blink-caret 1s step-end infinite;
+  animation: typing 2.5s steps(30, end), blink-caret 1s step-end infinite;
+}
+
+@media screen and (max-width: 575px) {
+  .typewriter h1 {
+    font-size: 1.8rem;
+  }
+
+  .title--big {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .typewriter h1 {
+    font-size: 1.2rem;
+  }
+
+  .title--big {
+    font-size: 1.7rem !important;
+  }
 }
 
 /* The typing effect */
