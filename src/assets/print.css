@@ -1,0 +1,26 @@
+/* Override javascript inline styles */
+
+@media print {
+    html,
+    body {
+        overflow: visible !important;
+        height: auto !important;
+    }
+    .fullpage-wrapper {
+        height: auto !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .fp-section {
+        height: 33% !important;
+    }
+    .fp-slidesContainer {
+        width: auto !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    .fp-slides,
+    .fp-slides * {
+        position: static !important;
+    }
+}

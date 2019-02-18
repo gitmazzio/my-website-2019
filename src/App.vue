@@ -13,6 +13,7 @@
           <div>
             <p>👦🏻 Front-end developer junior with a strong passion for everything related to the technological world</p>
             <p>😳 I am curious guy and I never get tired to think of new things to create!</p>
+            <p>🎓 I graduated in Digital Communication at the University of Milan</p>
             <p>📸 Photography is my biggest hobby</p>
           </div>
         </div>
@@ -129,5 +130,15 @@ export default {
 
 #fp-nav {
   z-index: 0;
+}
+
+@media print {
+  #section3, .fp-slide {
+        width: 50%!important;
+        float: left;
+    }
+  #section4{
+    display: none!important;
+  }
 }
 </style>

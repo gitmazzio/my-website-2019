@@ -48,4 +48,10 @@ export default {
   margin: 0;
 }
 }
+
+@media print {
+  .row {
+    
+  }
+}
 </style>

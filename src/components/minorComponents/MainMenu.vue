@@ -104,9 +104,15 @@ a {
   fill: #fff;
 }
 
-@media only screen and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   #menu {
     display: none;
+  }
+}
+
+@media print {
+  nav, #logo, #menu {
+    display: none!important;
   }
 }
 </style>

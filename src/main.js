@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import JsonViewer from 'vue-json-viewer'
 
+import './assets/print.css'
+
 Vue.use(JsonViewer)
 
 import VueClipboard from 'vue-clipboard2'
@@ -27,5 +29,5 @@ Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
+    render: h => h(App),
 }).$mount('#app');
