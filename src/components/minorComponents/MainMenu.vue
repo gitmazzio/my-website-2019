@@ -1,13 +1,13 @@
 <template>
     <ul id="menu">
       <li data-menuanchor="hi" class="active">
-        <a href="#hi">&lt; Hi /&gt;</a>
+        <a href="#hi">Hi</a>
       </li>
       <li data-menuanchor="aboutme">
-        <a href="#aboutme">&lt;AboutMe /&gt;</a>
+        <a href="#aboutme">About me</a>
       </li>
       <li data-menuanchor="contacts">
-        <a href="#contacts">&lt;Contacts /&gt;</a>
+        <a href="#contacts">Contacts</a>
       </li>
       <li>
         <a
@@ -67,9 +67,6 @@
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 <style>
@@ -86,8 +83,23 @@ export default {
 
 #menu a {
   color: #fff;
-  padding: 0 0.5em;
+      padding: 0 1em 0 0;
 }
+
+#menu a::after:not(.icon__social){
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width .3s;
+}
+
+#menu a:hover::after {
+    width: 100%;
+    /*transition: width .3s;*/
+}
+
 ul {
   list-style-type: none;
   padding: 0;

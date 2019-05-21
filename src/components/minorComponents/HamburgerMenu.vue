@@ -27,13 +27,13 @@
     
     <ul id="menuHamburger">
       <li data-menuanchor="hi" class="active">
-        <a href="#hi">&lt; Hi /&gt;</a>
+        <a href="#hi">Hi</a>
       </li>
       <li data-menuanchor="aboutme">
-        <a href="#aboutme">&lt;AboutMe /&gt;</a>
+        <a href="#aboutme">AboutMe</a>
       </li>
       <li data-menuanchor="contacts">
-        <a href="#contacts">&lt;Contacts /&gt;</a>
+        <a href="#contacts">Contacts</a>
       </li>
       <li>
         <a

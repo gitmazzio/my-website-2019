@@ -1,20 +1,21 @@
 import Vue from 'vue';
-import App from './App.vue';
 import BootstrapVue from 'bootstrap-vue';
 import VueFullPage from 'vue-fullpage.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-import JsonViewer from 'vue-json-viewer'
+import JsonViewer from 'vue-json-viewer';
 
-import './assets/print.css'
+import './assets/print.css';
 
-Vue.use(JsonViewer)
+import VueClipboard from 'vue-clipboard2';
+import App from './App.vue';
 
-import VueClipboard from 'vue-clipboard2'
+Vue.use(JsonViewer);
 
 Vue.use(VueClipboard);
 
@@ -29,5 +30,5 @@ Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 
 new Vue({
-    render: h => h(App),
+  render: h => h(App),
 }).$mount('#app');

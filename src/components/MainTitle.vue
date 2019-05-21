@@ -8,14 +8,14 @@
 export default {
   data() {
     return {
-      msg_length: this.msg.length
+      msg_length: this.msg.length,
     };
   },
   props: {
     msg: String,
     moreClasses: String,
-    color: String
-  }
+    color: String,
+  },
 };
 </script>
 
