@@ -224,7 +224,12 @@ nav{
 
 #menuHamburger a {
   color: #fff;
-  padding: 0 1.1em 1.1em 1.1em;
+  padding: 2em;
+}
+
+#menuHamburger a.icon__social {
+  color: #fff;
+  padding: 1em;
 }
 
 /*

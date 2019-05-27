@@ -83,10 +83,10 @@
 
 #menu a {
   color: #fff;
-      padding: 0 1em 0 0;
+      padding: 1rem 0;
 }
 
-#menu a::after:not(.icon__social){
+#menu a:not(.icon__social):after{
     content: '';
     display: block;
     width: 0;
