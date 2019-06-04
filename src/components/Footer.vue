@@ -40,7 +40,7 @@
       </p>
     </div>
     <span style="font-size: small">
-      Made with ❤ with
+      Made with ❤️ with
       <a target="_blank" href="https://github.com/vuejs/vue">Vue.js</a>
     </span>
   </footer>
