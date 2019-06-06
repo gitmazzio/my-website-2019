@@ -42,7 +42,7 @@ p a {
 @media screen and (max-width: 575px) {
   p a {
     font-size: 1.1rem;
-    color: white;
+    color: var(--email-color);
   }
 }
 </style>

@@ -218,16 +218,17 @@ nav {
 #menuHamburger li {
   padding: 15px 20px;
   font-size: 22px;
-  margin: 0 30px;
+  margin: 0 50px;
 }
 
 #menuHamburger a {
+  text-decoration: none;
   color: #fff;
   padding: 2em;
 }
 
 #menuHamburger a.icon__social {
-  color: #fff;
+  fill: #fff;
   padding: 1em;
 }
 

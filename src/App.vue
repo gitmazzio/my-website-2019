@@ -96,7 +96,7 @@ export default {
   --font-color: #2c3e50;
   --bg-color: #fff;
   --heading-color: #292922;
-  --mail-color: #253443;
+  --email-color: #253443;
   --footer-bg: #e4e4e4;
 }
 
@@ -106,7 +106,7 @@ export default {
   --font-color: #e1e1ff;
   --bg-color: #161625;
   --heading-color: #818cab;
-  --mail-color: #f6f8fa;
+  --email-color: #f6f8fa;
   --footer-bg: #49497b;
 }
 

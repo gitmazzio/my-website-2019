@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-switch-wrapper">
+  <div class="theme-switch-wrapper" v-b-tooltip.hover title="Dark Mode">
     <label class="theme-switch" for="checkbox">
       <input type="checkbox" id="checkbox">
       <div class="slider round"></div>
