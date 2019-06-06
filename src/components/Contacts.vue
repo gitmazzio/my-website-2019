@@ -1,7 +1,8 @@
 <template>
   <div>
     <MainTitle msg="Contacts"/>
-    <span>Don't hesitate to contact me at
+    <span>
+      Don't hesitate to contact me at
       <p>
         <a href="mailto:mmazziotti1@gmail.com">mmazziotti1@gmail.com</a>
       </p>
@@ -35,7 +36,7 @@ export default {
 <style scoped>
 p a {
   font-size: 1.5rem;
-  color: white;
+  color: var(--mail-color);
 }
 
 @media screen and (max-width: 575px) {

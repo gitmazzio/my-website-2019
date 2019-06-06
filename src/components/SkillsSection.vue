@@ -12,7 +12,8 @@
         <span v-if="skillsIndex !== otherSkills.length">Add skill! &#128584;</span>
         <span v-else>No more skills &#128517;</span>
       </b-button>
-      <p class="x-small mt-3">These skills come from LinkedIn!
+      <p class="x-small mt-3">
+        These skills come from LinkedIn!
         <br>I have not imagined them, I swear!
       </p>
     </div>
@@ -209,11 +210,11 @@ export default {
 }
 .skills__bigger {
   font-size: 1.3em;
-  color: #ffffff;
+  color: var(--font-color);
 }
 .skills__middle {
   font-size: 0.8em;
-  color: #ffffff;
+  color: var(--font-color);
 }
 
 @media screen and (max-width: 575px) {

@@ -54,13 +54,10 @@ export default {};
 <style>
 footer {
   font-size: small;
-  color: #ffffff;
+  color: var(--font-color);
 }
-footer a,
-a:hover,
-a:active,
-a::after {
+footer a {
   text-decoration: none !important;
-  color: #ffffff !important;
+  color: var(--font-color);
 }
 </style>

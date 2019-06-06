@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <span id="logo" class="logo">MM</span>
-    <MainMenu />
+    <MainMenu/>
     <HamburgerMenu/>
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section" id="section1">
@@ -9,7 +9,7 @@
       </div>
       <div class="section" id="section2">
         <div class="slide" data-anchor="/me">
-          <MainTitle msg="AboutMe"/>
+          <MainTitle msg="About me"/>
           <div>
             <p>👦🏻 Front-end developer junior with a strong passion for everything related to the technological world</p>
             <p>😳 I am curious guy and I never get tired to think of new things to create!</p>
@@ -22,13 +22,13 @@
         </div>
         <div class="slide" data-anchor="hobby">
           <h3>🚧 Under costruction! 😥</h3>
-          </div>
+        </div>
       </div>
       <div class="section" id="section3">
-        <Contacts />
+        <Contacts/>
       </div>
       <div class="section fp-auto-height" id="section4">
-        <Footer />
+        <Footer/>
       </div>
     </full-page>
   </div>
@@ -43,7 +43,6 @@ import MainMenu from "./components/minorComponents/MainMenu.vue";
 import SkillsSection from "./components/SkillsSection.vue";
 import Footer from "./components/Footer.vue";
 import Contacts from "./components/Contacts.vue";
-
 
 export default {
   name: "app",
@@ -62,10 +61,10 @@ export default {
         loopHorizontal: true,
         slidesNavigation: true,
         controlArrows: false,
-        slidesNavPosition: "bottom",
-        sectionsColor: [
-          "#41b883",
-          "#ff5f45",
+        slidesNavPosition: "bottom"
+        /* sectionsColor: [
+          "#FFFFFF",
+          "#FFFFFF",
           "#0798ec",
           "#EE1A59",
           "#fec401",
@@ -73,7 +72,7 @@ export default {
           "#2c3e4f",
           "#ba5be9",
           "#b4b8ab"
-        ]
+        ] */
       }
     };
   },
@@ -85,12 +84,32 @@ export default {
     HamburgerMenu,
     SkillsSection,
     Footer,
-    Contacts,
+    Contacts
   }
 };
 </script>
 
 <style>
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --font-color: #2c3e50;
+  --bg-color: #fff;
+  --heading-color: #292922;
+  --mail-color: #253443;
+  --footer-bg: #e4e4e4;
+}
+
+[data-theme="dark"] {
+  --primary-color: #060607;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+  --mail-color: #f6f8fa;
+  --footer-bg: #49497b;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -98,21 +117,23 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 .logo {
   position: fixed;
   top: 20px;
   left: 20px;
-  color: #fff;
+  background-color: var(--font-color);
+  color: var(--bg-color);
   font-weight: 700;
   z-index: 99;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   text-decoration: none;
-  background: #2c3e50;
-  padding: 10px 7px;
+  padding: 10px 9px;
   border-radius: 50%;
 }
 
@@ -133,12 +154,22 @@ export default {
 }
 
 @media print {
-  #section3, .fp-slide {
-        width: 50%!important;
-        float: left;
-    }
-  #section4{
-    display: none!important;
+  #section3,
+  .fp-slide {
+    width: 50% !important;
+    float: left;
   }
+  #section4 {
+    display: none !important;
+  }
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: var(--font-color);
+}
+
+#section4 {
+  background: var(--footer-bg);
 }
 </style>
