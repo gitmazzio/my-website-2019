@@ -4,15 +4,30 @@
       <input type="checkbox" id="checkbox">
       <div class="slider round"></div>
     </label>
+    <span class="labelDark">{{this.labelDark}}</span>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    labelDark: String
+  },
   mounted() {
     const toggleSwitch = document.querySelectorAll(
       '.theme-switch input[type="checkbox"]'
     );
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+
+      if (currentTheme === "dark") {
+        toggleSwitch.forEach(elem => {
+          elem.checked = true;
+        });
+      }
+    }
 
     toggleSwitch.forEach(elem => {
       elem.addEventListener(
@@ -20,8 +35,10 @@ export default {
         e => {
           if (e.target.checked) {
             document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
           } else {
             document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
           }
         },
         false
@@ -30,7 +47,6 @@ export default {
   },
   methods: {
     switchTheme(e) {
-      console.log("ciao");
       if (e.target.checked) {
         document.documentElement.setAttribute("data-theme", "dark");
       } else {
@@ -65,7 +81,7 @@ export default {
 }
 
 .slider {
-  background-color: #ccc;
+  background-color: #ffc107;
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -88,7 +104,7 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: #4e6f8f;
 }
 
 input:checked + .slider:before {
@@ -101,5 +117,13 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.theme-switch-wrapper span.labelDark {
+  font-size: 13px;
+  width: auto !important;
+  color: white;
+  font-style: italic;
+  padding: 0 10px;
 }
 </style>
