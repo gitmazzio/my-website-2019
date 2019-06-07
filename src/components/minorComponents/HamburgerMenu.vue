@@ -86,7 +86,7 @@
           </a>
         </li>
         <li>
-          <SwitcherDarkMode/>
+          <SwitcherDarkMode labelDark="Dark mode!"/>
         </li>
       </ul>
     </div>
