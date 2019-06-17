@@ -7,7 +7,7 @@
       <MainTitle msg="Weather UI"/>
       <p>Weather React app with stateless functional components</p>
       <b-button
-        href="http://weather.matteomazziotti.it"
+        href="https://weather.matteomazziotti.it"
         target="_blank"
         variant="primary"
         class="sticky-bottom mt-2"
