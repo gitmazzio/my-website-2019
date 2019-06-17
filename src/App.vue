@@ -21,7 +21,8 @@
           <SkillsSection/>
         </div>
         <div class="slide" data-anchor="hobby">
-          <h3>🚧 Under costruction! 😥</h3>
+          <!-- <h3>🚧 Under costruction! 😥</h3>-->
+          <WeatherApp/>
         </div>
       </div>
       <div class="section" id="section3">
@@ -41,6 +42,8 @@ import MainTitle from "./components/MainTitle.vue";
 import HamburgerMenu from "./components/minorComponents/HamburgerMenu.vue";
 import MainMenu from "./components/minorComponents/MainMenu.vue";
 import SkillsSection from "./components/SkillsSection.vue";
+import WeatherApp from "./components/WeatherApp.vue";
+
 import Footer from "./components/Footer.vue";
 import Contacts from "./components/Contacts.vue";
 
@@ -84,7 +87,8 @@ export default {
     HamburgerMenu,
     SkillsSection,
     Footer,
-    Contacts
+    Contacts,
+    WeatherApp
   }
 };
 </script>

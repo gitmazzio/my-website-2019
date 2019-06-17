@@ -5,7 +5,7 @@
 
       <b-button
         @click="addNewSkillToDOM"
-        variant="light"
+        :variant="skillsIndex !== otherSkills.length ? 'success': 'danger'"
         class="sticky-bottom mt-2"
         :disabled="skillsIndex === otherSkills.length"
       >
