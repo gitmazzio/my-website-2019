@@ -1,7 +1,11 @@
 <template>
   <div class="row">
     <div class="col-sm-4">
-      <img :src="require('../assets/me.png')" alt class="myPictures img__rounded img__shadow">
+      <img
+        :src="require('../assets/me.png')"
+        alt
+        class="myPictures img__rounded"
+      >
     </div>
 
     <div class="col-sm-8 mt-5">
@@ -34,11 +38,6 @@ export default {
 }
 .img__rounded {
   border-radius: 50%;
-}
-.img__shadow {
-  -webkit-box-shadow: 10px 10px 72px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 72px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 72px -10px rgba(0, 0, 0, 0.75);
 }
 
 @media only screen and (max-width: 575px) {

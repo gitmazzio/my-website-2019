@@ -20,7 +20,7 @@
         <div class="slide" data-anchor="skills" id="skills">
           <SkillsSection/>
         </div>
-        <div class="slide" data-anchor="hobby">
+        <div class="slide" data-anchor="weather-app">
           <!-- <h3>🚧 Under costruction! 😥</h3>-->
           <WeatherApp/>
         </div>
@@ -138,6 +138,12 @@ export default {
   text-decoration: none;
   padding: 10px 9px;
   border-radius: 50%;
+}
+
+.img__border--shadow {
+  -webkit-box-shadow: 0px 0px 20px 0px var(--secondary-color);
+  -moz-box-shadow: 0px 0px 20px 0px var(--secondary-color);
+  box-shadow: 0px 0px 20px 0px var(--secondary-color);
 }
 
 @media screen and (max-width: 575px) {

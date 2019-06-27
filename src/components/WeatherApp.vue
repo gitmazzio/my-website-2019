@@ -37,7 +37,7 @@ export default {
   text-align: right;
 }
 .img__iphone--weather img {
-  width: 60%;
+  width: 50%;
   height: auto;
 }
 
