@@ -1,20 +1,16 @@
 <template>
   <div class="row">
     <div class="col-sm-4">
-      <img
-        :src="require('../assets/me.png')"
-        alt
-        class="myPictures img__rounded"
-      >
+      <img :src="require('../assets/me.png')" alt class="myPictures img__rounded" />
     </div>
 
     <div class="col-sm-8 mt-5">
-      <MainTitle msg="Hey!" moreClasses="title--big font-weight-bold"/>
+      <MainTitle msg="Hey!" moreClasses="title--big font-weight-bold" />
       <p class="font-weight-bold">
         I'm Matteo Mazziotti
-        <br>I'm a creative Front-end Developer
+        <br />I'm a creative Front-end Developer
       </p>
-      <b-badge class="p-2 m-1" variant="dark">26 years old</b-badge>
+      <b-badge class="p-2 m-1" variant="dark">27 years old</b-badge>
       <b-badge class="p-2 m-1" variant="warning">Milan</b-badge>
       <b-badge class="p-2 m-1" variant="danger">Front-end Dev</b-badge>
     </div>
