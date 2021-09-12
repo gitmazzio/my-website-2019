@@ -1,35 +1,42 @@
 <template>
   <div id="app">
     <span id="logo" class="logo">MM</span>
-    <MainMenu/>
-    <HamburgerMenu/>
+    <MainMenu />
+    <HamburgerMenu />
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section" id="section1">
-        <HomePage/>
+        <HomePage />
       </div>
       <div class="section" id="section2">
         <div class="slide" data-anchor="/me">
-          <MainTitle msg="About me"/>
+          <MainTitle msg="About me" />
           <div>
-            <p>👦🏻 Front-end developer junior with a strong passion for everything related to the technological world</p>
-            <p>😳 I am curious guy and I never get tired to think of new things to create!</p>
-            <p>🎓 I graduated in Digital Communication at the University of Milan</p>
+            <p>
+              👦🏻 Front-end developer with a strong passion for everything
+              related to the technological world
+            </p>
+            <p>
+              😳 I am curious guy and I never get tired to think of new things
+              to create!
+            </p>
+            <p>
+              🎓 I graduated in Digital Communication at the University of Milan
+            </p>
             <p>📸 Photography is my biggest hobby</p>
           </div>
         </div>
         <div class="slide" data-anchor="skills" id="skills">
-          <SkillsSection/>
+          <SkillsSection />
         </div>
         <div class="slide" data-anchor="weather-app">
-          <!-- <h3>🚧 Under costruction! 😥</h3>-->
-          <WeatherApp/>
+          <WeatherApp />
         </div>
       </div>
       <div class="section" id="section3">
-        <Contacts/>
+        <Contacts />
       </div>
       <div class="section fp-auto-height" id="section4">
-        <Footer/>
+        <Footer />
       </div>
     </full-page>
   </div>
@@ -63,8 +70,8 @@ export default {
         slideSelector: ".slide",
         loopHorizontal: true,
         slidesNavigation: true,
-        controlArrows: false,
-        slidesNavPosition: "bottom"
+        controlArrows: true,
+        slidesNavPosition: "bottom",
         /* sectionsColor: [
           "#FFFFFF",
           "#FFFFFF",
@@ -76,11 +83,10 @@ export default {
           "#ba5be9",
           "#b4b8ab"
         ] */
-      }
+      },
     };
   },
   components: {
-    HelloWorld,
     HomePage,
     MainTitle,
     MainMenu,
@@ -88,8 +94,21 @@ export default {
     SkillsSection,
     Footer,
     Contacts,
-    WeatherApp
-  }
+    WeatherApp,
+  },
+  mounted() {
+    this.addArrowIcon();
+  },
+  methods: {
+    addArrowIcon() {
+      const arrows = ["prev", "next"];
+      arrows.forEach((arrow) => {
+        /* const img = document.createElement("img");
+        img.src = "img/".concat(arrow).concat(".png");
+        document.querySelector(".fp-" + arrow).appendChild(img); */
+      });
+    },
+  },
 };
 </script>
 
@@ -136,8 +155,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   text-decoration: none;
-  padding: 10px 9px;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  place-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .img__border--shadow {
@@ -180,5 +205,28 @@ export default {
 
 #section4 {
   background: var(--footer-bg);
+}
+
+.fp-controlArrow.fp-next img,
+.fp-controlArrow.fp-prev img {
+  height: 100%;
+  display: block;
+}
+
+.fp-controlArrow.fp-prev {
+  left: 0;
+  border: none;
+  width: 50px;
+  height: 101px;
+  /* background: url("./assets/prev.svg") no-repeat; */
+  cursor: pointer;
+}
+.fp-controlArrow.fp-next {
+  right: 0;
+  border: none;
+  width: 50px;
+  height: 101px;
+  /* background: url("./assets/next.png") no-repeat; */
+  cursor: pointer;
 }
 </style>
